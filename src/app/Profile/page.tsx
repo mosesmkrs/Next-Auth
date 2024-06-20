@@ -17,8 +17,8 @@ const ProfilePage = async () => {
         className="rounded-full"
       /> */}
       <div className="grid grid-cols-4 gap-y-4">
-        <p>First Name:</p> <p className="col-span-3">{user?.firstName}</p>
-        <p>Last Name:</p> <p className="col-span-3">{user?.lastName}</p>
+        <p>First Name:</p> <p className="col-span-3">{user?.firstname}</p>
+        <p>Last Name:</p> <p className="col-span-3">{user?.lastname}</p>
         <p>Phone:</p> <p className="col-span-3">{user?.phone}</p>
         <p>Email:</p> <p className="col-span-3">{user?.email}</p>
       </div>

@@ -55,17 +55,19 @@ function SignUpForm() {
         resolver: zodResolver(FormSchema),
     });
 
-    const saveUser: SubmitHandler<InputType> = async (data) => {
-       const {acceptTerms, confirmPassword, ...user} = data;
-
-        try {
-            const result = await registerUser(user);
-            toast.success("Registered Successfully")
-        } catch (e) {
-            toast.error("Something went wrong");
-            console.log(e)
-        }
+const saveUser: SubmitHandler<InputType> = async (data) => {
+    const { acceptTerms, confirmPassword, ...userData } = data;
+    const { firstName, lastName, email, password, phone } = userData;
+    
+    try {
+        const result = await registerUser({ firstname: firstName, lastname: lastName, email, password, phone });
+        toast.success("Registered Successfully");
+    } catch (e) {
+        toast.error("Something went wrong");
+        console.log(e);
     }
+}
+
 
 
     const [passStrength, setpassStrength] = useState(0)

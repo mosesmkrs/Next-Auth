@@ -11,7 +11,7 @@ function SignInButton() {
     <div >
       {session && session.user ? (
         <div className='flex items-center'>
-        <Link href='/Profile' className='gap-2 mx-2'>{session.user.firstName}</Link>
+        <Link href='/Profile' className='gap-2 mx-2 text-white'>{session.user.firstname}</Link>
         <Button className='gap-2' color="primary" onClick={()=>signOut()}>SignOut</Button> 
         </div>
       ):(
