@@ -46,7 +46,7 @@ const SignInForm = (props: Props) => {
       return;
     }
     toast.success("Welcome To MKRS website!");
-    router.push(props.callbackUrl ? props.callbackUrl : "/");
+    router.push(props.callbackUrl ? props.callbackUrl : "/Profile");
   };
 
     return (
